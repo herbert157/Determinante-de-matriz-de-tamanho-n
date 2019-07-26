@@ -55,12 +55,15 @@ int main(int argc, char** argv) {
 				coluna_aux[j]=matriz[contador1][j];				
 			}
 			
-			for(int i=0;i<qtdcoluna;i++){
-				coluna_aux[i]=coluna_aux[i]/aux1;
+			if(aux1!=0){
+				for(int i=0;i<qtdcoluna;i++){
+					coluna_aux[i]=coluna_aux[i]/aux1;
+				}
 			}
+			
 			 
 			for(int i=0;i<qtdcoluna;i++){				 
-				matriz[contador1][i]=(-1)*matriz[contador1][i];              //dsad
+				matriz[contador1][i]=(-1)*matriz[contador1][i];              
 			}
 		
 		}
