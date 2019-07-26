@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 	
 	setlocale(LC_ALL, "Portuguese");
 	
-	printf("******Programa para calcular o determinante de uma matriz quadratica******\n\nDigite a dimens„o da matriz\n");
+	printf("******Programa para calcular o determinante de uma matriz quadratica******\n\nDigite a dimens√£o da matriz\n");
 	scanf("%d",&qtdlinha);
 	
 	qtdcoluna=qtdlinha;	
@@ -55,12 +55,13 @@ int main(int argc, char** argv) {
 				coluna_aux[j]=matriz[contador1][j];				
 			}
 			
-			for(int i=0;i<qtdcoluna;i++){
-				coluna_aux[i]=coluna_aux[i]/aux1;
-			}
-			 
+			if(aux1!=0){
+				for(int i=0;i<qtdcoluna;i++){
+					coluna_aux[i]=coluna_aux[i]/aux1;
+				}
+			} 
 			for(int i=0;i<qtdcoluna;i++){				 
-				matriz[contador1][i]=(-1)*matriz[contador1][i];              //dsad
+				matriz[contador1][i]=(-1)*matriz[contador1][i];             
 			}
 		
 		}
@@ -79,7 +80,7 @@ int main(int argc, char** argv) {
 	}
 	float determinante=Multi_diagonal(qtdlinha,qtdcoluna,matriz);
 	
-	printf("\n==>O determinante dessa matriz È igual a %.3f\n",determinante);	
+	printf("\n==>O determinante dessa matriz √© igual a %.3f\n",determinante);	
 	
 	
 	for(int i=0;i<qtdlinha;i++){
